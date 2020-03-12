@@ -8,16 +8,20 @@
     "build": "parcel build ./src/index.html"
   },
   "devDependencies": {
+    "@types/react": "^16.9.23",
     "parcel-bundler": "^1.12.4",
     "sass": "^1.26.3",
     "typescript": "^3.8.3"
   },
   "dependencies": {
     "react": "^16.13.0",
-    "react-dom": "^16.13.0"
+    "react-dom": "^16.13.0",
+    "tslib": "^1.11.1"
   },
   "browserslist": [
     "> 1%",
-    "last 2 versions"
+    "last 2 versions",
+    "not chrome <= 57",
+    "not ie <= 11"
   ]
 }
