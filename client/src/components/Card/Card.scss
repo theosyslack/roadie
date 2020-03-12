@@ -1,0 +1,17 @@
+.Card {
+  border-radius: 7px;
+  width: 100%;
+  max-width: 700px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.3);
+  background: white;
+  overflow: hidden;
+  padding: 10px;
+  border: 2px transparent solid;
+
+  transition: box-shadow 222ms ease-in-out, border 222ms ease-in-out;
+
+  &:focus-within {
+    border: 2px #429287 solid;
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.4);
+  }
+}
