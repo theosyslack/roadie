@@ -1,10 +1,21 @@
 .Result {
   display: grid;
-  grid-template-columns: auto 1fr 1fr;
+  grid-template-columns: auto 1fr;
   gap: 10px;
+  padding: 5px 10px;
   align-items: center;
 
   .Result__type {
     font-size: 30px;
+  }
+
+  .Result__name {
+    font-size: 25px;
+    font-weight: 500;
+    color: #222;
+  }
+
+  &:hover {
+    background: #bbb;
   }
 }
