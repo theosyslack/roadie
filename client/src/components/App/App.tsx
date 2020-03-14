@@ -3,13 +3,17 @@ import "./App.scss";
 import Search from "../Search/Search";
 import Card from "../Card/Card";
 import Results from "../Results/Results";
-import { useStore } from "react-redux";
+import { useDispatch } from "react-redux";
+import updateFacilities from 'actions/updateFacilities';
 import getFacilities from '../../api/getFacilities';
 
 function App({ results = [] }) {
+  const dispatch = useDispatch();
 
   useEffect(() => {
-    getFacilities().then();
+    getFacilities().then(facilities => {
+      dispatch(updateFacilities(facilities))
+    });
   }, []);
 
   return (
