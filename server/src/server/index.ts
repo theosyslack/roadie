@@ -4,7 +4,7 @@ import facilities from './routes/facilities';
 import logServerStart from '../log/logServerStart';
 
 const app = express();
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || 3030;
 
 export default function startServer () {
   // Add Routes

@@ -1,10 +1,18 @@
-const facilities = (app) => {
-  app.get('/facilities', (req, res) => res.send('/facilities'))
-  app.post('/facilities/:query', (req, res) => {
+import getFacilities from '../../api/getFacilities';
+import transformRawFacilityToFacility from '../transform/transformRawFacilityToFacility';
+
+const API_KEY = process.env.API_KEY;
+
+const addFacilitiesRoutes = (app) => {
+
+  app.get('/facilities/:query?', async (req, res) => {
     const {query} = req.params;
-    console.log(query);
-    res.json(query)
+
+    const rawFacilities = await getFacilities({query});
+    const facilities = rawFacilities.map(transformRawFacilityToFacility);
+
+    res.json(facilities)
   })
 }
 
-export default facilities
+export default addFacilitiesRoutes
