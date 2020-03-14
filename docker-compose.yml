@@ -1,0 +1,14 @@
+version: "3.0"
+services:
+  client:
+    build: client/
+    ports:
+      - "80:80"
+    links:
+      - server
+  server:
+    build: server/
+    env_file:
+      - server/.env
+    ports:
+      - "$PORT:$PORT"
