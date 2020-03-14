@@ -5,7 +5,9 @@
   "license": "MIT",
   "scripts": {
     "start": "parcel ./src/index.html",
-    "build": "parcel build ./src/index.html"
+    "build": "parcel build  --bundle-node-modules ./src/index.html",
+    "prebuild:docker": "yarn build",
+    "build:docker": "docker build -t roadie-client ."
   },
   "devDependencies": {
     "@types/react": "^16.9.23",
