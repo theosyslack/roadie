@@ -1,11 +1,17 @@
-import React from "react";
+import React, {useEffect} from "react";
 import "./App.scss";
 import Search from "../Search/Search";
 import Card from "../Card/Card";
 import Results from "../Results/Results";
 import { useStore } from "react-redux";
+import getFacilities from '../../api/getFacilities';
 
 function App({ results = [] }) {
+
+  useEffect(() => {
+    getFacilities().then();
+  }, []);
+
   return (
     <div className="App">
       <div className="App__title"> 🏕️</div>

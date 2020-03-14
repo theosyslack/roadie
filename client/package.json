@@ -17,6 +17,7 @@
   },
   "dependencies": {
     "actions": "^1.3.0",
+    "axios": "^0.19.2",
     "react": "^16.13.0",
     "react-dom": "^16.13.0",
     "react-redux": "^7.2.0",
@@ -28,7 +29,9 @@
     "reducers": "./src/store/reducers",
     "selectors": "./src/store/selectors",
     "transform": "./src/transform",
-    "components": "./src/components"
+    "components": "./src/components",
+    "types": "./src/types",
+    "api": "./src/api"
   },
   "browserslist": [
     "> 1%",
