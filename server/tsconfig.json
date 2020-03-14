@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "importHelpers": true,
+    "importHelpers": false, // Otherwise we get a "cannot find tslib error".
     "removeComments": true,
     "forceConsistentCasingInFileNames": true,
     "strict": true,
