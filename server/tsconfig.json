@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "importHelpers": true,
+    "removeComments": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+  }
+}
