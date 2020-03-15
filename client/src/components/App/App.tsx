@@ -11,9 +11,9 @@ function App({ results = [] }) {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    getFacilities().then(facilities => {
-      dispatch(updateFacilities(facilities))
-    });
+    // getFacilities().then(facilities => {
+    //   dispatch(updateFacilities(facilities))
+    // });
   }, []);
 
   return (
