@@ -8,9 +8,9 @@ Roadie is your one-stop shop for planning next weekend's road trip. Don't forget
 
 ## Requirements
 
-- yarn
-- docker and docker-compose
- 
+- `yarn`
+- `docker` and `docker-compose`
+
 ## Instructions
 
 1. Get an API Key from https://ridb.recreation.gov/
