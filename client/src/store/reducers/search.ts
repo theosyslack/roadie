@@ -1,7 +1,9 @@
 import {updateSearchType} from 'actions/updateSearch'
 import updateSearch from 'reducers/updateSearch'
 
-export default function searchReducer(state = "", { type, payload }) {
+const DEFAULT_STATE = ""
+
+export default function searchReducer(state = DEFAULT_STATE, { type, payload }) {
   switch (type) {
     case updateSearchType;
       return updateSearch(state, payload)

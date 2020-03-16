@@ -1,18 +1,17 @@
-import transform from "transform/transformRawResultDataToResultData";
-import {updateFacilitiesType} from 'actions/updateFacilities'
-import updateFacilities from 'reducers/updateFacilities'
+import { addNewFacilities } from '../actions/addNewFacilities';
 
 
-import facilities from "../default/facilities";
-
-const DEFAULT_STATE = facilities.map(transform);
+const DEFAULT_STATE = {
+  entities: {}
+  status: FACILITIES_STATUSES[0]
+}
 
 export default function facilitiesReducer(
   state = [],
   { type, payload }
 ) {
   switch (type) {
-    case updateFacilitiesType:
+    case addNewFacilities:
       return updateFacilities(state, payload)
     default:
       return state;

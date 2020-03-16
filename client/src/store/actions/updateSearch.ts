@@ -1,4 +1,4 @@
-export const updateSearchType = "UPDATE_SEARCH";
+export const updateSearchType = "[search] UPDATE_SEARCH";
 
 export default search => ({
   type: updateSearchType,
