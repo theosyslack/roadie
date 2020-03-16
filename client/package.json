@@ -30,6 +30,7 @@
     "selectors": "./src/store/selectors",
     "transform": "./src/transform",
     "components": "./src/components",
+    "store": "./src/store",
     "types": "./src/types",
     "api": "./src/api"
   },
