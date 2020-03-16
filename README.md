@@ -1,6 +1,7 @@
 # Status: 90% Complete
 
 - TODO: Complete Redux Configuration
+- TODO: Fix Import issues from renaming Redux Actions
 
 # Roadie 🏕️
 
