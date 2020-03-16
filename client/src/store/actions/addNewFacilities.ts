@@ -1,4 +1,4 @@
-import { Facility } from '../../types';
+import { Facility } from "../../types";
 
 export const addNewFacilitiesType = "[facilities] ADD_NEW";
 

@@ -1,13 +1,10 @@
-import {updateFacilitiesType, FACILITIES_STATUSES} from 'actions/updateFacilities'
-
-
+import { FACILITIES_STATUSES } from "../actions/updateFacilitiesStatus.ts";
 
 export default (state, status) => {
   const isValidStatus = FACILITIES_STATUSES.includes(status);
-  if (payload && isValidStatus) {
-    return {...state, status};
+  if (status && isValidStatus) {
+    return { ...state, status };
   } else if (!isValidStatus) {
-    console.log(`${status} is not a valid status.`)
     return state;
   } else {
     return state;

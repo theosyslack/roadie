@@ -4,10 +4,10 @@ import Result from "components/Result/Result";
 import { ResultsData } from "../../types";
 import { useSelector } from "react-redux";
 
-import "./Results.scss"
+import "./Results.scss";
 
 function Results() {
-  const facilities = useSelector(({facilities}) => facilities);
+  const facilities = useSelector(({ facilities }) => []);
 
   return facilities.length === 0 ? (
     <div className="App__results Results">
@@ -18,9 +18,9 @@ function Results() {
   ) : (
     <div className="App__results Results">
       <Card className="Results__card">
-          {facilities.map(result => (
-            <Result key={result.id} {...result} />
-          ))}
+        {facilities.map(result => (
+          <Result key={result.id} {...result} />
+        ))}
       </Card>
     </div>
   );
