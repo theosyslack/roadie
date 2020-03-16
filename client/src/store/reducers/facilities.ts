@@ -1,4 +1,5 @@
 import { addNewFacilities } from '../actions/addNewFacilities';
+import { FACILITIES_STATUSES } from '../actions/updateFacilitiesStatus';
 
 
 const DEFAULT_STATE = {
