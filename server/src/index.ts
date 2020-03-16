@@ -1,14 +1,12 @@
-import logAPIWarning from './log/logAPIWarning';
-import startServer from './server';
+import logAPIWarning from "./log/logAPIWarning";
+import startServer from "./server";
+import { API_KEY } from "./consts";
 
-const API_KEY = process.env.API_KEY;
-
-async function main (){
-
+async function main() {
   if (!API_KEY || API_KEY === "") {
     logAPIWarning();
   } else {
-    startServer()
+    startServer();
   }
 }
 

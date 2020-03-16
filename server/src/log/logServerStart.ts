@@ -1,6 +1,6 @@
 import chalk from 'chalk';
+import { PORT } from "../consts";
 
-const PORT = process.env.PORT;
 const URL = `http://localhost:${PORT}`;
 
 export default function logServerStart(){

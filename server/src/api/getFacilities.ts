@@ -1,12 +1,10 @@
-import axios from 'axios';
-import memoizeWith from 'ramda/src/memoizeWith'
-import {RawFacility} from '../types';
+import axios from "axios";
+import memoizeWith from "ramda/src/memoizeWith";
+import { RawFacility } from "../types";
+import { API_KEY } from "../consts";
 
-const API_KEY = process.env.API_KEY;
-
-async function getFacilities ({query}): RawFacility[] {
-
-  const {data} = await axios({
+async function getFacilities({ query }): RawFacility[] {
+  const { data } = await axios({
     method: "GET",
     url: "https://ridb.recreation.gov/api/v1/facilities",
     params: {
@@ -19,9 +17,9 @@ async function getFacilities ({query}): RawFacility[] {
       Accept: "application/json",
       Apikey: API_KEY
     }
-  })
+  });
 
   return data.RECDATA;
 }
 
-export default memoizeWith(({query}) =>  query,getFacilities)
+export default memoizeWith(({ query }) => query, getFacilities);
