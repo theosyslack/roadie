@@ -7,8 +7,7 @@ import {
 import updateFacilitiesStatus from "../reducers/updateFacilitiesStatus";
 
 const DEFAULT_STATE = {
-  entities: {},
-  ids: [],
+  facilities: [],
   status: FACILITIES_STATUSES[0]
 };
 

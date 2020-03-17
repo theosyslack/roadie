@@ -1,5 +1,5 @@
 function getFacilitiesBaseOnSearch(state) {
-  return;
+  return state.facilities.facilities;
 }
 
 export default getFacilitiesBaseOnSearch;

@@ -1,14 +1,10 @@
-import { FACILITIES_STATUSES } from '../actions/updateFacilitiesStatus';
+import { FACILITIES_STATUSES } from "../actions/updateFacilitiesStatus";
+import { Facility } from "../../types";
 
-
-
-export default (state, status: string) => {
-  const isValidStatus = FACILITIES_STATUSES.includes(status);
-  if (status && isValidStatus) {
-    return { ...state, status };
-  } else if (!isValidStatus) {
-    console.log(`${status} is not a valid status.`)
-    return state;
+export default (state, facilities: Facility[]) => {
+  console.log(`Added ${facilities.length} facilities`);
+  if (facilities) {
+    return { ...state, facilities };
   } else {
     return state;
   }
