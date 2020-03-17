@@ -5,14 +5,13 @@ import { ResultsData } from "../../types";
 import { useSelector } from "react-redux";
 import getFacilitiesStatus from "store/selectors/getFacilitiesStatus";
 import getFacilities from "store/selectors/getFacilities";
+import getSearch from "store/selectors/getSearch";
 import { FACILITIES_STATUSES } from "store/actions/updateFacilitiesStatus";
 
 import "./Results.scss";
 
 function Results() {
   const status = useSelector(getFacilitiesStatus);
-  const facilities = [];
-
   console.log(status);
 
   if (status === FACILITIES_STATUSES[0]) return null;
@@ -25,7 +24,7 @@ function ResultsPending() {
   return (
     <div className="App__results Results Results--is-pending">
       <Card>
-        <div className="Results__pending">Pending...</div>
+        <div className="Results__title">Pending...</div>
       </Card>
     </div>
   );
@@ -33,16 +32,18 @@ function ResultsPending() {
 
 function ResultsSuccess() {
   const facilities = useSelector(getFacilities);
+  const search = useSelector(getSearch);
 
   return facilities.length === 0 ? (
     <div className="App__results Results">
       <Card>
-        <div className="Results__none">No Results</div>
+        <div className="Results__title">No Results for "{search}".</div>
       </Card>
     </div>
   ) : (
     <div className="App__results Results">
       <Card className="Results__card">
+        {search && <div className="Results__title">Results for "{search}"</div>}
         {facilities.map(result => (
           <Result key={result.id} {...result} />
         ))}
