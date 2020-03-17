@@ -21,7 +21,11 @@ function Results() {
 }
 
 function ResultsPending() {
-  return (
+  const facilities = useSelector(getFacilities);
+
+  return facilities.length === 0 ? (
+    <ResultsSuccess />
+  ) : (
     <div className="App__results Results Results--is-pending">
       <Card>
         <div className="Results__title">Pending...</div>

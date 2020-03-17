@@ -3,7 +3,7 @@ import home from "./routes/home";
 import facilities from "./routes/facilities";
 import logServerStart from "../log/logServerStart";
 import cors from "cors";
-import { PORT } from "../consts";
+import { SERVER_PORT } from "../consts";
 const app = express();
 
 export default function startServer() {
@@ -15,5 +15,5 @@ export default function startServer() {
   facilities(app);
 
   // Start Server
-  app.listen(PORT, logServerStart);
+  app.listen(SERVER_PORT, logServerStart);
 }
