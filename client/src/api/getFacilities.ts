@@ -18,9 +18,16 @@ async function getFacilities(query = "camp"): Facility[] {
 
   dispatch(updateStatusToPending);
 
-  const { data, status, ..rest  } = await axios.get(url);
+  const { data, status, ..rest  } = await axios.get(url).catch((e) => {
+    const {message, name, code} = e.toJSON()
+    dispatch(updateStatusToFailure);
+    console.error(message)
+    return {}
+  });
 
-  if (status >= 200 && status < 400) {
+  const ok = status >= 200 && status < 400
+
+  if (ok) {
     dispatch(updateStatusToSuccess);
     dispatch(addNewFacilities(data));
     return data;
