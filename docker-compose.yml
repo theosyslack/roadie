@@ -2,16 +2,17 @@ version: "3.0"
 services:
   client:
     build: client/
-    environment:
-      - SERVER_PORT
+    env_file:
+      - .env
     ports:
       - "$CLIENT_PORT:$CLIENT_PORT"
     links:
       - server
   server:
     build: server/
+    env_file:
+      - .env
     environment:
       - API_KEY
-      - SERVER_PORT
     ports:
       - "$SERVER_PORT:$SERVER_PORT"
