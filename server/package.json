@@ -15,7 +15,7 @@
     "axios": "^0.19.2",
     "chalk": "^3.0.0",
     "cors": "^2.8.5",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "parcel-bundler": "^1.12.4",
     "ramda": "^0.27.0",
     "typescript": "^3.8.3"
